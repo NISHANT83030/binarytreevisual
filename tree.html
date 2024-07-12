@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <title>React App</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      background-color: rgb(194, 242, 253);
+    }
+
+    .inputContainer {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 15rem;
+    }
+
+    textarea {
+      resize: none;
+      width: 100%;
+      border-width: 2px;
+      border-radius: 5px;
+      border-color: antiquewhite;
+      box-shadow:0 3px 3px rgb(119, 118, 118);
+      color: aliceblue;
+      font-size: 1rem;
+      background-color: #b428df;
+    }
+
+    .actionBtns {
+      width: 100%;
+      display: flex;
+      gap: 3rem;
+    }
+
+    button {
+      width: 10rem;
+      height: 3rem;
+            border-radius: 1rem;
+      border-width: 2px;
+      transition: background-color 0.3s;
+      /* Smooth transition for color change */
+    }
+   .draw,.clear{
+        width: 10rem;
+        height: 3rem;
+        background-color: rgb(68, 226, 68);
+        border-radius: 2rem;
+        border-width: 2px;
+        border-color: antiquewhite;
+        box-shadow:0 3px 3px rgb(119, 118, 118);
+        color: aliceblue;
+        font-size: 1rem;
+    }
+    .clear{
+        background-color: rgb(226, 118, 68);
+    }
+    button:hover {
+      background-color: transparent;
+      }
+  </style>
+  </head>
+
+  <body>
+    <div class="inputContainer">
+      <h3>Enter the Node values here:</h3>
+      <textarea class="input" rows="5" style="padding: 0.5rem;" title="Enter node values separated with comma"></textarea>
+      <div class="actionBtns">
+        <button class="draw">Draw</button>
+        <button class="clear">Clear</button>
+      </div>
+    </div>
+    <canvas></canvas>
+    <script type="module" src="./drawtree.js"></script>
+
+  </body>
+
+</html>
